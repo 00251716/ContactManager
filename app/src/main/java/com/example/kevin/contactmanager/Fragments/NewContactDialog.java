@@ -14,8 +14,6 @@ import com.example.kevin.contactmanager.Controllers.ContactController;
 import com.example.kevin.contactmanager.DesignUtils.IconDrawer;
 import com.example.kevin.contactmanager.R;
 
-import java.util.Arrays;
-import java.util.Comparator;
 
 public class NewContactDialog extends DialogFragment {
 

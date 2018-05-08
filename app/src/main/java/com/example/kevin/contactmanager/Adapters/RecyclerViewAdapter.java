@@ -1,20 +1,28 @@
 package com.example.kevin.contactmanager.Adapters;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.kevin.contactmanager.Controllers.ContactController;
+import com.example.kevin.contactmanager.MainActivity;
 import com.example.kevin.contactmanager.R;
+
 
 import java.util.ArrayList;
 
@@ -50,12 +58,32 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         vHolder.contactItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView dName = myDialog.findViewById(R.id.dName);
-                TextView dPhone = myDialog.findViewById(R.id.dPhone);
-                ImageView dImg = myDialog.findViewById(R.id.dImg);
+                final TextView dName = myDialog.findViewById(R.id.dName);
+                final TextView dPhone = myDialog.findViewById(R.id.dPhone);
+                final ImageView dImg = myDialog.findViewById(R.id.dImg);
+                final TextView dEmail = myDialog.findViewById(R.id.dEmail);
+                final TextView dAddress = myDialog.findViewById(R.id.dAddress);
+
                 dName.setText(mData.get(vHolder.getAdapterPosition()).getName());
                 dPhone.setText(mData.get(vHolder.getAdapterPosition()).getPhoneNumber1());
                 dImg.setImageBitmap(mData.get(vHolder.getAdapterPosition()).getPhoto());
+                dEmail.setText(mData.get(vHolder.getAdapterPosition()).getEmail());
+                dAddress.setText(mData.get(vHolder.getAdapterPosition()).getAddress());
+
+                Button dCallBtn = (Button) myDialog.findViewById(R.id.dCallBtn);
+                dCallBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(mData.get(vHolder.getAdapterPosition()).getPhoneNumber1()));
+                        if(ActivityCompat.checkSelfPermission(MainActivity.getContext(), Manifest.permission.CALL_PHONE) !=
+                                PackageManager.PERMISSION_GRANTED) {
+                            return;
+                        }
+                        MainActivity.getContext().startActivity(intent);
+                    }
+                });
+
 
                 myDialog.show();
             }

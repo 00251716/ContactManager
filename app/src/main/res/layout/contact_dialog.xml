@@ -8,12 +8,13 @@
 
     <LinearLayout
         android:layout_marginTop="40dp"
+        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:orientation="vertical"
         android:gravity="center_horizontal">
-        
+
         <TextView
             android:id="@+id/dName"
             android:layout_width="wrap_content"
@@ -24,44 +25,135 @@
             android:textSize="24sp"
             android:layout_marginTop="90dp"/>
 
-        <TextView
-            android:id="@+id/dPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Phone Number"
-            android:textColor="@android:color/white"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"/>
+
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_contact_phone_white"
+                />
+
+            <TextView
+                android:id="@+id/dPhone"
+                android:layout_marginLeft="10dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Phone Number"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_email_white"
+                />
+
+            <TextView
+                android:id="@+id/dEmail"
+                android:layout_marginLeft="10dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Email address"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_location_on_white"
+                />
+
+            <TextView
+                android:id="@+id/dAddress"
+                android:layout_marginLeft="10dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Address"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_phone"/>
+
+            <Button
+                android:id="@+id/dCallBtn"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Mobile Call"/>
 
 
         </LinearLayout>
-        <Button
-            android:id="@+id/dCallBtn"
-            android:padding="20dp"
-            android:textAlignment="textStart"
-            android:drawablePadding="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#fff"
-            android:layout_margin="5dp"
-            android:text="Mobile Call"/>
 
-        <Button
-            android:id="@+id/dShareBtn"
-            android:padding="20dp"
-            android:drawablePadding="20dp"
-            android:textAlignment="textStart"
-            android:layout_width="match_parent"
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#fff"
-            android:layout_margin="5dp"
-            android:text="Share"/>
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_share"/>
+
+            <Button
+                android:id="@+id/dShareBtn"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:background="?android:attr/selectableItemBackground"/>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

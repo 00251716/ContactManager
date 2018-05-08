@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/home/kevin/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_contact_phone_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/home/kevin/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/toggle/ic_star_border_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_contact_phone_white" />
+                            <entry key="color" value="fffc4d" />
+                            <entry key="outputName" value="ic_star_yellow" />
                             <entry key="sourceFile" value="$USER_HOME$" />
                           </map>
                         </option>

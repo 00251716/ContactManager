@@ -56,7 +56,7 @@
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_phone"/>
+            app:srcCompat="@drawable/ic_star_yellow"/>
 
     </LinearLayout>
 

@@ -1,5 +1,7 @@
 package com.example.kevin.contactmanager.Controllers;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.Context;
@@ -11,6 +13,7 @@ import android.provider.ContactsContract;
 
 import com.example.kevin.contactmanager.MainActivity;
 import com.example.kevin.contactmanager.DesignUtils.IconDrawer;
+import com.example.kevin.contactmanager.Utils.PermissionUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,7 +48,7 @@ public class ContactController{
     }
 
     private ContactController() {
-        loadContacts();
+            loadContacts();
     }
 
     public void loadContacts(){

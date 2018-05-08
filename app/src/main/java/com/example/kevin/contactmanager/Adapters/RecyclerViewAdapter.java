@@ -1,15 +1,10 @@
 package com.example.kevin.contactmanager.Adapters;
 
-import android.Manifest;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.kevin.contactmanager.Controllers.ContactController;
-import com.example.kevin.contactmanager.MainActivity;
 import com.example.kevin.contactmanager.R;
 
 
@@ -75,12 +69,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     @Override
                     public void onClick(View v) {
 
-                        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(mData.get(vHolder.getAdapterPosition()).getPhoneNumber1()));
-                        if(ActivityCompat.checkSelfPermission(MainActivity.getContext(), Manifest.permission.CALL_PHONE) !=
-                                PackageManager.PERMISSION_GRANTED) {
-                            return;
-                        }
-                        MainActivity.getContext().startActivity(intent);
                     }
                 });
 

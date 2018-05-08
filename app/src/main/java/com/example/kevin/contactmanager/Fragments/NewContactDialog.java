@@ -46,7 +46,19 @@ public class NewContactDialog extends DialogFragment {
                 //Seteamos sus variables para matchear lo que el usuario ha puesto en la form
                 newContact.setName(editTextName.getText().toString());
                 newContact.setPhoneNumber1(editTextPhone.getText().toString());
-                Bitmap image = IconDrawer.generateCircleBitmap(getActivity(), 0xFF3F51B5, 50, "E");
+                String name = editTextName.getText().toString();
+                String firstLetter;
+                if(!name.isEmpty()){
+                    firstLetter = name.substring(1,0);
+                } else {
+                    firstLetter = " ";
+                }
+                Bitmap image;
+                if(!firstLetter.isEmpty()) {
+                    image = IconDrawer.generateCircleBitmap(getActivity(), IconDrawer.getRandomColor(), 50, firstLetter);
+                } else {
+                    image = IconDrawer.generateCircleBitmap(getActivity(), IconDrawer.getRandomColor(), 50, " ");
+                }
                 newContact.setPhoto(image);
 
                 //Pasamos los datos al controlador de contactos

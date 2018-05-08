@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="@string/phone_hint" />
+                android:hint="Ingrese el nombre aquí" />
 
         </LinearLayout>
 
@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="phone"
-                android:hint="@string/phone_hint" />
+                android:hint="Ingrese el correo electrónico aquí" />
 
         </LinearLayout>
 
@@ -144,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="phone"
-                android:hint="@string/phone_hint" />
+                android:hint="Ingrese la dirección aquí" />
 
         </LinearLayout>
 
